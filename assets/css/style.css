@@ -525,3 +525,296 @@ img {
         grid-row: span 1;
     }
 }
+
+/* ================= 8. TRANG CHI TIẾT (DETAIL PAGE) ================= */
+.detail-page {
+    padding: 32px 0 80px;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.detail-header h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-top: 6px;
+}
+
+.rating-badge {
+    background-color: var(--bg-light);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+/* THƯ VIỆN ẢNH CHUYỂN ĐỔI THUẦN CSS */
+.css-gallery {
+    margin-bottom: 48px;
+}
+
+.css-gallery input[type="radio"] {
+    display: none;
+}
+
+.gallery-main {
+    position: relative;
+    height: 480px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.gallery-main .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.5s ease;
+    transform: scale(1.02);
+}
+
+.gallery-main .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hiển thị ảnh tương ứng khi radio được chọn */
+#img-1:checked ~ .gallery-main .slide-1,
+#img-2:checked ~ .gallery-main .slide-2,
+#img-3:checked ~ .gallery-main .slide-3,
+#img-4:checked ~ .gallery-main .slide-4 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.gallery-thumbs .thumb {
+    height: 100px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    opacity: 0.65;
+    transition: var(--transition);
+}
+
+.gallery-thumbs .thumb:hover {
+    opacity: 1;
+}
+
+.gallery-thumbs .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Làm nổi bật ảnh nhỏ đang được chọn */
+#img-1:checked ~ .gallery-thumbs label[for="img-1"],
+#img-2:checked ~ .gallery-thumbs label[for="img-2"],
+#img-3:checked ~ .gallery-thumbs label[for="img-3"],
+#img-4:checked ~ .gallery-thumbs label[for="img-4"] {
+    border-color: var(--accent-color);
+    opacity: 1;
+}
+
+/* BỐ CỤC 2 CỘT CHI TIẾT & SIDEBAR STICKY */
+.detail-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.info-block {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-block:last-child {
+    border-bottom: none;
+}
+
+.info-block h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.specs-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.specs-list li {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* BẢNG GIÁ HIỆN ĐẠI */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.price-table th,
+.price-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.price-table thead {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.price-table tbody tr:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+.price-table tbody tr:hover {
+    background-color: #EFECE6;
+}
+
+/* KHUNG ĐẶT LỊCH TRƯỢT THEO MÀN HÌNH */
+.booking-sidebar {
+    position: sticky;
+    top: 100px; /* Cách mép trên 100px để không đè lên Header */
+}
+
+.booking-card {
+    background-color: #FFFFFF;
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.booking-price .amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.booking-note {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 16px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.price-summary {
+    background-color: var(--bg-light);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    margin: 20px 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.summary-row.total {
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+}
+
+/* Responsive cho trang chi tiết */
+@media (max-width: 992px) {
+    .detail-layout {
+        grid-template-columns: 1fr;
+    }
+    .booking-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-main {
+        height: 280px;
+    }
+    .gallery-thumbs .thumb {
+        height: 65px;
+    }
+    .specs-list {
+        grid-template-columns: 1fr;
+    }
+}
