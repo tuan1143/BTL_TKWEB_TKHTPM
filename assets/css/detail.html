@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lều Mông Cổ Rừng Thông Săn Mây - CampVibe Glamping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER (Dùng chung từ index.html) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Camp<span>Vibe</span>.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="campsites.html">Khu cắm trại</a></li>
+                    <li><a href="detail.html" class="active">Dịch vụ nổi bật</a></li>
+                    <li><a href="blog.html">Cẩm nang</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-btn">Đặt lịch ngay</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detail-page">
+        <div class="container">
+            <!-- Đường dẫn điều hướng (Breadcrumb) -->
+            <nav class="breadcrumb">
+                <a href="index.html">Trang chủ</a> / 
+                <a href="campsites.html">Đà Lạt</a> / 
+                <span>Lều Mông Cổ Rừng Thông Săn Mây</span>
+            </nav>
+
+            <!-- Tiêu đề chính -->
+            <div class="detail-header">
+                <div>
+                    <span class="location-tag">📍 Đồi Đa Phú, Phường 7, TP. Đà Lạt</span>
+                    <h1>Lều Mông Cổ Rừng Thông Săn Mây (Luxury Yurt)</h1>
+                </div>
+                <div class="rating-badge">
+                    ⭐ <strong>4.9</strong> <span>(128 đánh giá)</span>
+                </div>
+            </div>
+
+            <!-- THƯ VIỆN ẢNH TƯƠNG TÁC THUẦN CSS (KHÔNG DÙNG JS) -->
+            <section class="css-gallery">
+                <!-- Các nút radio ẩn điều khiển trạng thái ảnh -->
+                <input type="radio" name="gallery-slider" id="img-1" checked>
+                <input type="radio" name="gallery-slider" id="img-2">
+                <input type="radio" name="gallery-slider" id="img-3">
+                <input type="radio" name="gallery-slider" id="img-4">
+
+                <!-- Khung hiển thị ảnh lớn -->
+                <div class="gallery-main">
+                    <div class="slide slide-1">
+                        <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1200&q=80" alt="Toàn cảnh lều Mông Cổ">
+                    </div>
+                    <div class="slide slide-2">
+                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=80" alt="Không gian bên trong lều">
+                    </div>
+                    <div class="slide slide-3">
+                        <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=1200&q=80" alt="Tiệc nướng BBQ buổi tối">
+                    </div>
+                    <div class="slide slide-4">
+                        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1200&q=80" alt="View săn mây buổi sáng">
+                    </div>
+                </div>
+
+                <!-- Hàng ảnh thu nhỏ (Thumbnails) dùng thẻ label để kích hoạt radio -->
+                <div class="gallery-thumbs">
+                    <label for="img-1" class="thumb">
+                        <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=300&q=80" alt="Thumb 1">
+                    </label>
+                    <label for="img-2" class="thumb">
+                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=300&q=80" alt="Thumb 2">
+                    </label>
+                    <label for="img-3" class="thumb">
+                        <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=300&q=80" alt="Thumb 3">
+                    </label>
+                    <label for="img-4" class="thumb">
+                        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=300&q=80" alt="Thumb 4">
+                    </label>
+                </div>
+            </section>
+
+            <!-- BỐ CỤC 2 CỘT: THÔNG TIN CHI TIẾT (TRÁI) + KHUNG ĐẶT LỊCH STICKY (PHẢI) -->
+            <div class="detail-layout">
+                
+                <!-- Cột trái: Nội dung mô tả & Bảng giá -->
+                <div class="detail-info">
+                    <div class="info-block">
+                        <h2>Giới thiệu không gian</h2>
+                        <p>Tọa lạc trên ngọn đồi thông tách biệt hoàn toàn với sự ồn ào của phố thị, khu lều Mông Cổ Luxury Yurt mang đến tầm nhìn 360 độ hướng thẳng ra thung lũng mây Đà Lạt. Mỗi căn lều có diện tích lên tới 35m², được lót sàn gỗ thông tự nhiên cách nhiệt và trang bị đầy đủ tiện nghi như một phòng khách sạn 5 sao.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Tiện nghi có sẵn trong lều</h2>
+                        <ul class="specs-list">
+                            <li>✓ Giường King-size (1m8 x 2m) đệm lò xo cao cấp</li>
+                            <li>✓ Máy sưởi gốm & Điều hòa 2 chiều</li>
+                            <li>✓ Phòng vệ sinh khép kín riêng biệt bên cạnh lều</li>
+                            <li>✓ Ban công gỗ riêng kèm bàn trà ngắm bình minh</li>
+                            <li>✓ Wi-Fi tốc độ cao & Hệ thống đèn sưởi ấm áp</li>
+                            <li>✓ Miễn phí bữa sáng và set BBQ tối cho 2 người</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bảng giá dịch vụ (Thể hiện kỹ năng CSS Table) -->
+                    <div class="info-block">
+                        <h2>Bảng giá áp dụng theo ngày</h2>
+                        <div class="table-responsive">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>Thời điểm lưu trú</th>
+                                        <th>Tiêu chuẩn</th>
+                                        <th>Giá trọn gói / đêm</th>
+                                        <th>Phụ thu thêm người</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Thứ 2 – Thứ 5</td>
+                                        <td>2 Người lớn</td>
+                                        <td><strong>1.850.000đ</strong></td>
+                                        <td>450.000đ / khách</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thứ 6 – Chủ Nhật</td>
+                                        <td>2 Người lớn</td>
+                                        <td><strong>2.250.000đ</strong></td>
+                                        <td>500.000đ / khách</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dịp Lễ, Tết</td>
+                                        <td>2 Người lớn</td>
+                                        <td><strong>2.600.000đ</strong></td>
+                                        <td>600.000đ / khách</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Khung đặt phòng cố định khi cuộn (Sticky Sidebar) -->
+                <aside class="booking-sidebar">
+                    <div class="booking-card">
+                        <div class="booking-price">
+                            <span class="amount">1.850.000đ</span> <span class="unit">/ đêm</span>
+                        </div>
+                        <p class="booking-note">Đã bao gồm bữa sáng & Tiệc BBQ tối</p>
+
+                        <form action="contact.html" class="booking-form">
+                            <div class="form-group">
+                                <label for="book-checkin">Ngày nhận lều</label>
+                                <input type="date" id="book-checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="book-checkout">Ngày trả lều</label>
+                                <input type="date" id="book-checkout" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="book-guests">Số lượng khách</label>
+                                <select id="book-guests">
+                                    <option value="2">2 Người lớn (Tiêu chuẩn)</option>
+                                    <option value="3">3 Người lớn (+450k)</option>
+                                    <option value="4">4 Người lớn (+900k)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="book-addon">Dịch vụ thêm (Tùy chọn)</label>
+                                <select id="book-addon">
+                                    <option value="none">Không chọn thêm</option>
+                                    <option value="car">Xe đưa đón trung tâm (+200k)</option>
+                                    <option value="deco">Trang trí kỷ niệm / Sinh nhật (+350k)</option>
+                                </select>
+                            </div>
+
+                            <div class="price-summary">
+                                <div class="summary-row">
+                                    <span>1.850.000đ x 1 đêm</span>
+                                    <span>1.850.000đ</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Phí vệ sinh & Dịch vụ</span>
+                                    <span>Miễn phí</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Tổng tạm tính</span>
+                                    <span>1.850.000đ</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Tiến hành đặt lều</button>
+                        </form>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Dùng chung từ index.html) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">Camp<span>Vibe</span>.</a>
+                <p>Hệ thống đặt lịch cắm trại cao cấp hàng đầu Việt Nam. Mang đến trải nghiệm hòa mình với thiên nhiên an toàn và tiện nghi nhất.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="campsites.html">Danh sách khu trại</a></li>
+                    <li><a href="blog.html">Kinh nghiệm cắm trại</a></li>
+                    <li><a href="contact.html">Chính sách hoàn hủy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>📍 Số 1 Phố Xốm, Phú Lãm, Hà Đông, Hà Nội</li>
+                    <li>📞 Hotline: 1900 6868</li>
+                    <li>✉️ Email: booking@campvibe.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CampVibe Glamping. Thiết kế bởi Sinh viên CNTT.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
