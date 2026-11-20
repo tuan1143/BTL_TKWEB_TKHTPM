@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampVibe - Trải Nghiệm Cắm Trại Cao Cấp (Glamping)</title>
+    <!-- Nhúng Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Nhúng file CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Camp<span>Vibe</span>.</a>
+            
+            <!-- Checkbox ẩn điều khiển Menu trên Mobile (Không dùng JS) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Trang chủ</a></li>
+                    <li><a href="campsites.html">Khu cắm trại</a></li>
+                    <li><a href="detail.html">Dịch vụ nổi bật</a></li>
+                    <li><a href="blog.html">Cẩm nang</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-btn">Đặt lịch ngay</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION & THANH TÌM KIẾM -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="badge">Khám phá thiên nhiên theo cách sang trọng</span>
+                <h1>Chạm vào thiên nhiên, tận hưởng sự tiện nghi</h1>
+                <p>Hệ thống khu cắm trại Glamping chuẩn 5 sao giữa rừng thông Đà Lạt, núi rừng Ba Vì và bờ biển Hồ Cốc.</p>
+                
+                <!-- Form tìm kiếm nhanh (Mô phỏng giao diện chuẩn UX) -->
+                <form action="campsites.html" class="search-box">
+                    <div class="search-group">
+                        <label for="location">Địa điểm</label>
+                        <select id="location" name="location">
+                            <option value="dalat">Đà Lạt, Lâm Đồng</option>
+                            <option value="bavi">Ba Vì, Hà Nội</option>
+                            <option value="hococ">Hồ Cốc, Vũng Tàu</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label for="checkin">Ngày nhận lều</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div class="search-group">
+                        <label for="guests">Số lượng khách</label>
+                        <input type="number" id="guests" name="guests" min="1" max="10" value="2">
+                    </div>
+                    <button type="submit" class="btn btn-primary search-btn">Tìm khu trại</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- KHU CẮM TRẠI NỔI BẬT (BỐ CỤC CSS GRID BẤT ĐỐI XỨNG) -->
+        <section class="section featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Điểm đến được yêu thích nhất</h2>
+                    <p>Lựa chọn không gian nghỉ dưỡng lý tưởng cho kỳ nghỉ cuối tuần của bạn</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Thẻ lớn chiếm 2 cột, 2 hàng -->
+                    <article class="camp-card card-large">
+                        <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" alt="Đà Lạt Pine Camp">
+                        <span class="tag-discount">-15% Cuối tuần</span>
+                        <div class="card-overlay">
+                            <span class="location-tag">Đà Lạt</span>
+                            <h3><a href="detail.html">Lều Mông Cổ Rừng Thông Săn Mây</a></h3>
+                            <p class="price">1.850.000đ <span>/ đêm</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Các thẻ nhỏ -->
+                    <article class="camp-card">
+                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80" alt="Ba Vì Eco Camp">
+                        <div class="card-overlay">
+                            <span class="location-tag">Ba Vì</span>
+                            <h3><a href="detail.html">Lều Chữ A View Suối Mơ</a></h3>
+                            <p class="price">1.200.000đ <span>/ đêm</span></p>
+                        </div>
+                    </article>
+
+                    <article class="camp-card">
+                        <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=600&q=80" alt="Hồ Cốc Beach Camp">
+                        <div class="card-overlay">
+                            <span class="location-tag">Hồ Cốc</span>
+                            <h3><a href="detail.html">Glamping Bãi Biển Hoàng Hôn</a></h3>
+                            <p class="price">2.100.000đ <span>/ đêm</span></p>
+                        </div>
+                    </article>
+
+                    <article class="camp-card card-wide">
+                        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80" alt="Mộc Châu Valley">
+                        <div class="card-overlay">
+                            <span class="location-tag">Mộc Châu</span>
+                            <h3><a href="detail.html">Nhà Vòm Kính Giữa Đồi Chè</a></h3>
+                            <p class="price">1.650.000đ <span>/ đêm</span></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIỆN ÍCH & TRẢI NGHIỆM (SỬ DỤNG FLEXBOX) -->
+        <section class="section amenities bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trải nghiệm trọn gói đẳng cấp</h2>
+                    <p>Mọi thứ đều được chuẩn bị sẵn sàng, bạn chỉ cần xách ba lô lên và đi</p>
+                </div>
+
+                <div class="amenities-flex">
+                    <div class="amenity-item">
+                        <div class="icon-box">🔥</div>
+                        <h3>Tiệc nướng BBQ tối</h3>
+                        <p>Set thực đơn hải sản và thịt nướng tẩm ướp sẵn phục vụ tận cửa lều.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="icon-box">🛶</div>
+                        <h3>Chèo thuyền SUP</h3>
+                        <p>Miễn phí thiết bị chèo thuyền và áo phao khám phá hồ nước bình minh.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="icon-box">🛏️</div>
+                        <h3>Nội thất chuẩn 5 sao</h3>
+                        <p>Đệm lò xo êm ái, điều hòa hai chiều và phòng tắm riêng biệt sạch sẽ.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="icon-box">🎸</div>
+                        <h3>Đêm nhạc Acoustic</h3>
+                        <p>Quây quần bên bếp lửa trại, thưởng thức âm nhạc và rượu vang ấm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">Camp<span>Vibe</span>.</a>
+                <p>Hệ thống đặt lịch cắm trại cao cấp hàng đầu Việt Nam. Mang đến trải nghiệm hòa mình với thiên nhiên an toàn và tiện nghi nhất.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="campsites.html">Danh sách khu trại</a></li>
+                    <li><a href="blog.html">Kinh nghiệm cắm trại</a></li>
+                    <li><a href="contact.html">Chính sách hoàn hủy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>📍 Số 1 Phố Xốm, Phú Lãm, Hà Đông, Hà Nội</li>
+                    <li>📞 Hotline: 1900 6868</li>
+                    <li>✉️ Email: booking@campvibe.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CampVibe Glamping. Thiết kế bởi Sinh viên CNTT.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,527 @@
+/* ================= 1. BIẾN CSS & RESET ================= */
+:root {
+    --primary-color: #2D5A27;      /* Xanh rêu rừng thông */
+    --primary-hover: #1E3F1A;
+    --accent-color: #D97736;       /* Cam đất lửa trại */
+    --bg-main: #FFFFFF;
+    --bg-light: #F7F6F2;           /* Màu kem ấm tự nhiên */
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* Nút bấm dùng chung */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #C06224;
+    transform: translateY(-2px);
+}
+
+/* ================= 2. HEADER & NAVIGATION ================= */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-list a {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--primary-color);
+}
+
+/* Gạch chân hiệu ứng khi hover menu */
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+    width: 100%;
+}
+
+.nav-toggle, .nav-toggle-label {
+    display: none;
+}
+
+/* ================= 3. HERO & SEARCH BOX ================= */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    background: url('https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.65));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Thanh tìm kiếm nổi */
+.search-box {
+    background-color: #FFFFFF;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    box-shadow: var(--shadow-lg);
+    color: var(--text-dark);
+    text-align: left;
+}
+
+.search-group {
+    flex: 1;
+    min-width: 180px;
+    padding: 0 12px;
+    border-right: 1px solid var(--border-color);
+}
+
+.search-group:last-of-type {
+    border-right: none;
+}
+
+.search-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.search-group select,
+.search-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.search-btn {
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
+}
+
+/* ================= 4. BENTO GRID (ĐIỂM ĐẾN NỔI BẬT) ================= */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    gap: 24px;
+}
+
+.card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-wide {
+    grid-column: span 2;
+}
+
+.camp-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.camp-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng phóng to ảnh khi hover */
+.camp-card:hover img {
+    transform: scale(1.08);
+}
+
+.tag-discount {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    color: #FFFFFF;
+}
+
+.location-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FCD34D;
+    font-weight: 600;
+}
+
+.card-overlay h3 {
+    font-size: 1.25rem;
+    margin: 6px 0;
+}
+
+.card-large .card-overlay h3 {
+    font-size: 1.75rem;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.price span {
+    font-weight: 400;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* ================= 5. TIỆN ÍCH (FLEXBOX) ================= */
+.amenities-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.amenity-item {
+    flex: 1 1 240px;
+    background-color: #FFFFFF;
+    padding: 32px 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.amenity-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.amenity-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.amenity-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ================= 6. FOOTER ================= */
+.footer {
+    background-color: #162B14;
+    color: #E5E7EB;
+    padding-top: 64px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 48px;
+}
+
+.footer-logo {
+    color: #FFFFFF;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-col h4 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+    color: #9CA3AF;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.875rem;
+    color: #9CA3AF;
+}
+
+/* ================= 7. RESPONSIVE (TABLET & MOBILE) ================= */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Xử lý Menu Hamburger thuần CSS */
+    .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background: var(--primary-color);
+        height: 3px;
+        width: 26px;
+        border-radius: 2px;
+        position: relative;
+        transition: var(--transition);
+    }
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+    .nav-toggle-label span::before { bottom: 8px; }
+    .nav-toggle-label span::after { top: 8px; }
+
+    .navbar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 5%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        gap: 16px;
+    }
+
+    .nav-btn {
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Khi checkbox được check -> Mở menu */
+    .nav-toggle:checked ~ .navbar {
+        max-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .search-group {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 12px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+    }
+    .card-large, .card-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
