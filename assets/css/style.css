@@ -818,3 +818,253 @@ img {
         grid-template-columns: 1fr;
     }
 }
+/* ================= 9. TRANG DANH SÁCH (CAMPSITES PAGE) ================= */
+.page-banner {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 56px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    opacity: 0.85;
+    font-size: 1.05rem;
+}
+
+.campsites-page {
+    padding: 60px 0 80px;
+    background-color: var(--bg-light);
+}
+
+/* Ẩn các nút radio điều khiển bộ lọc */
+.filter-wrapper input[type="radio"] {
+    display: none;
+}
+
+.filter-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Sidebar Bộ lọc bên trái */
+.filter-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filter-box {
+    background-color: #FFFFFF;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-box h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-label {
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.filter-label:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+}
+
+/* Đổi màu nút lọc đang được chọn */
+#filter-all:checked ~ .filter-sidebar label[for="filter-all"],
+#filter-dalat:checked ~ .filter-sidebar label[for="filter-dalat"],
+#filter-bavi:checked ~ .filter-sidebar label[for="filter-bavi"],
+#filter-hococ:checked ~ .filter-sidebar label[for="filter-hococ"] {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* LOGIC LỌC THẺ SẢN PHẨM BẰNG CSS THUẦN */
+#filter-dalat:checked ~ .campsites-grid .listing-card:not([data-category="dalat"]),
+#filter-bavi:checked ~ .campsites-grid .listing-card:not([data-category="bavi"]),
+#filter-hococ:checked ~ .campsites-grid .listing-card:not([data-category="hococ"]) {
+    display: none;
+}
+
+.static-filter-list li {
+    margin-bottom: 12px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+.static-filter-list input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+/* Lưới thẻ khu cắm trại bên phải */
+.campsites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.listing-card {
+    background-color: #FFFFFF;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.listing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.listing-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.listing-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.listing-card:hover .listing-img img {
+    transform: scale(1.06);
+}
+
+.badge-status {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.badge-status.discount {
+    background-color: var(--accent-color);
+}
+
+.listing-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.listing-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.listing-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.listing-body h3 a:hover {
+    color: var(--primary-color);
+}
+
+.listing-body .desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.listing-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.price-val {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.price-unit {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.btn-outline {
+    padding: 8px 16px;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+/* Responsive trang danh sách */
+@media (max-width: 992px) {
+    .filter-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .filter-sidebar {
+        position: static;
+    }
+    .filter-options {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .campsites-grid {
+        grid-template-columns: 1fr;
+    }
+}
