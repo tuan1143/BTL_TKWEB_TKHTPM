@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Khu cắm trại - CampVibe Glamping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER (Dùng chung) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Camp<span>Vibe</span>.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="campsites.html" class="active">Khu cắm trại</a></li>
+                    <li><a href="detail.html">Dịch vụ nổi bật</a></li>
+                    <li><a href="blog.html">Cẩm nang</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-btn">Đặt lịch ngay</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER TIÊU ĐỀ TRANG -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Khám phá các điểm đến Glamping</h1>
+            <p>Lọc theo khu vực yêu thích để tìm không gian nghỉ dưỡng phù hợp nhất với bạn</p>
+        </div>
+    </section>
+
+    <main class="campsites-page">
+        <div class="container">
+            <!-- BỘ LỌC BẰNG RADIO BUTTON THUẦN CSS (Đặt ngang cấp để điều khiển lưới bên dưới) -->
+            <div class="filter-wrapper">
+                <input type="radio" name="location-filter" id="filter-all" checked>
+                <input type="radio" name="location-filter" id="filter-dalat">
+                <input type="radio" name="location-filter" id="filter-bavi">
+                <input type="radio" name="location-filter" id="filter-hococ">
+
+                <!-- CỘT TRÁI: SIDEBAR BỘ LỌC -->
+                <aside class="filter-sidebar">
+                    <div class="filter-box">
+                        <h3>Khu vực điểm đến</h3>
+                        <div class="filter-options">
+                            <label for="filter-all" class="filter-label">Tất cả địa điểm (6)</label>
+                            <label for="filter-dalat" class="filter-label">Đà Lạt, Lâm Đồng (2)</label>
+                            <label for="filter-bavi" class="filter-label">Ba Vì, Hà Nội (2)</label>
+                            <label for="filter-hococ" class="filter-label">Hồ Cốc, Vũng Tàu (2)</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <h3>Tiện ích đi kèm</h3>
+                        <ul class="static-filter-list">
+                            <li><label><input type="checkbox" checked> Bao gồm bữa sáng & BBQ</label></li>
+                            <li><label><input type="checkbox" checked> Nhà vệ sinh riêng khép kín</label></li>
+                            <li><label><input type="checkbox"> Cho phép mang thú cưng</label></li>
+                            <li><label><input type="checkbox"> Có khu vực đốt lửa trại</label></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- CỘT PHẢI: LƯỚI DANH SÁCH KHU CẮM TRẠI -->
+                <div class="campsites-grid">
+                    
+                    <!-- Card 1: Đà Lạt -->
+                    <article class="listing-card" data-category="dalat">
+                        <div class="listing-img">
+                            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=600&q=80" alt="Đà Lạt Pine Camp">
+                            <span class="badge-status">Bán chạy</span>
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-meta">
+                                <span class="loc">📍 Đà Lạt</span>
+                                <span class="rate">⭐ 4.9</span>
+                            </div>
+                            <h3><a href="detail.html">Lều Mông Cổ Rừng Thông Săn Mây</a></h3>
+                            <p class="desc">View thung lũng mây 360 độ, nội thất gỗ thông ấm cúng, bao gồm tiệc BBQ tối.</p>
+                            <div class="listing-footer">
+                                <div class="price-box">
+                                    <span class="price-val">1.850.000đ</span>
+                                    <span class="price-unit">/ đêm</span>
+                                </div>
+                                <a href="detail.html" class="btn btn-outline">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Ba Vì -->
+                    <article class="listing-card" data-category="bavi">
+                        <div class="listing-img">
+                            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80" alt="Ba Vì Eco Camp">
+                            <span class="badge-status discount">-10%</span>
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-meta">
+                                <span class="loc">📍 Ba Vì</span>
+                                <span class="rate">⭐ 4.8</span>
+                            </div>
+                            <h3><a href="detail.html">Lều Chữ A View Suối Mơ</a></h3>
+                            <p class="desc">Cách Hà Nội chỉ 45 phút lái xe, nằm sát bờ suối tự nhiên mát lạnh quanh năm.</p>
+                            <div class="listing-footer">
+                                <div class="price-box">
+                                    <span class="price-val">1.200.000đ</span>
+                                    <span class="price-unit">/ đêm</span>
+                                </div>
+                                <a href="detail.html" class="btn btn-outline">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Hồ Cốc -->
+                    <article class="listing-card" data-category="hococ">
+                        <div class="listing-img">
+                            <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=600&q=80" alt="Hồ Cốc Beach Camp">
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-meta">
+                                <span class="loc">📍 Hồ Cốc</span>
+                                <span class="rate">⭐ 4.9</span>
+                            </div>
+                            <h3><a href="detail.html">Glamping Bãi Biển Hoàng Hôn</a></h3>
+                            <p class="desc">Dựng lều ngay trên bãi cát trắng mịn, thức dậy đón bình minh trên biển.</p>
+                            <div class="listing-footer">
+                                <div class="price-box">
+                                    <span class="price-val">2.100.000đ</span>
+                                    <span class="price-unit">/ đêm</span>
+                                </div>
+                                <a href="detail.html" class="btn btn-outline">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Đà Lạt -->
+                    <article class="listing-card" data-category="dalat">
+                        <div class="listing-img">
+                            <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=600&q=80" alt="Nhà Vòm Kính Đà Lạt">
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-meta">
+                                <span class="loc">📍 Đà Lạt</span>
+                                <span class="rate">⭐ 4.7</span>
+                            </div>
+                            <h3><a href="detail.html">Nhà Vòm Kính Ngắm Sao Đêm</a></h3>
+                            <p class="desc">Thiết kế mái vòm trong suốt độc đáo giữa vườn hồng cổ thụ Đà Lạt.</p>
+                            <div class="listing-footer">
+                                <div class="price-box">
+                                    <span class="price-val">1.650.000đ</span>
+                                    <span class="price-unit">/ đêm</span>
+                                </div>
+                                <a href="detail.html" class="btn btn-outline">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: Ba Vì -->
+                    <article class="listing-card" data-category="bavi">
+                        <div class="listing-img">
+                            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=600&q=80" alt="Rừng Thông Ba Vì">
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-meta">
+                                <span class="loc">📍 Ba Vì</span>
+                                <span class="rate">⭐ 4.8</span>
+                            </div>
+                            <h3><a href="detail.html">Trại Rừng Thông Vườn Quốc Gia</a></h3>
+                            <p class="desc">Không gian riêng tư tuyệt đối cho nhóm bạn hoặc gia đình nhỏ dịp cuối tuần.</p>
+                            <div class="listing-footer">
+                                <div class="price-box">
+                                    <span class="price-val">1.450.000đ</span>
+                                    <span class="price-unit">/ đêm</span>
+                                </div>
+                                <a href="detail.html" class="btn btn-outline">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6: Hồ Cốc -->
+                    <article class="listing-card" data-category="hococ">
+                        <div class="listing-img">
+                            <img src="https://images.unsplash.com/photo-1496545672447-f699b503d270?auto=format&fit=crop&w=600&q=80" alt="Rừng Tràm Hồ Cốc">
+                            <span class="badge-status">Mới mở</span>
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-meta">
+                                <span class="loc">📍 Hồ Cốc</span>
+                                <span class="rate">⭐ 5.0</span>
+                            </div>
+                            <h3><a href="detail.html">Eco Tent Giao Thoa Rừng & Biển</a></h3>
+                            <p class="desc">Vị trí đắc địa lưng tựa rừng nguyên sinh Bình Châu, mặt hướng ra biển lớn.</p>
+                            <div class="listing-footer">
+                                <div class="price-box">
+                                    <span class="price-val">1.950.000đ</span>
+                                    <span class="price-unit">/ đêm</span>
+                                </div>
+                                <a href="detail.html" class="btn btn-outline">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Dùng chung) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">Camp<span>Vibe</span>.</a>
+                <p>Hệ thống đặt lịch cắm trại cao cấp hàng đầu Việt Nam. Mang đến trải nghiệm hòa mình với thiên nhiên an toàn và tiện nghi nhất.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="campsites.html">Danh sách khu trại</a></li>
+                    <li><a href="blog.html">Kinh nghiệm cắm trại</a></li>
+                    <li><a href="contact.html">Chính sách hoàn hủy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>📍 Số 1 Phố Xốm, Phú Lãm, Hà Đông, Hà Nội</li>
+                    <li>📞 Hotline: 1900 6868</li>
+                    <li>✉️ Email: booking@campvibe.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampVibe Glamping. Thiết kế bởi Sinh viên CNTT.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
