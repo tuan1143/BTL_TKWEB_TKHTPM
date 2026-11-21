@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm Nang & Kinh Nghiệm Cắm Trại - CampVibe Glamping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER (Dùng chung) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Camp<span>Vibe</span>.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="campsites.html">Khu cắm trại</a></li>
+                    <li><a href="detail.html">Dịch vụ nổi bật</a></li>
+                    <li><a href="blog.html" class="active">Cẩm nang</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-btn">Đặt lịch ngay</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER TIÊU ĐỀ -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Tạp Chí & Cẩm Nang Glamping</h1>
+            <p>Kinh nghiệm xê dịch, bí quyết chuẩn bị hành trang và những câu chuyện giữa thiên nhiên</p>
+        </div>
+    </section>
+
+    <main class="blog-page">
+        <div class="container">
+
+            <!-- BÀI VIẾT TIÊU ĐIỂM (FEATURED EDITORIAL ARTICLE) -->
+            <article class="featured-article">
+                <div class="featured-img">
+                    <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=1000&q=80" alt="Kinh nghiệm đi Glamping lần đầu">
+                    <span class="category-pill">Tiêu điểm tuần này</span>
+                </div>
+                <div class="featured-body">
+                    <div class="post-meta">
+                        <span>🗓️ 15 Tháng 11, 2026</span>
+                        <span>•</span>
+                        <span>⏱️ 5 phút đọc</span>
+                        <span>•</span>
+                        <span>✍️ Minh Anh</span>
+                    </div>
+                    <h2><a href="#article-detail">Lần đầu đi Glamping cần chuẩn bị gì? Cẩm nang từ A–Z cho người mới bắt đầu</a></h2>
+                    <p class="excerpt">Khác với cắm trại truyền thống phải tự tay dựng lều và mang vác lỉnh kỉnh, Glamping mang đến trải nghiệm nghỉ dưỡng giữa rừng đầy đủ tiện nghi. Tuy nhiên, để chuyến đi trọn vẹn nhất, bạn vẫn cần lưu ý những vật dụng cá nhân quan trọng...</p>
+                    
+                    <!-- Trích dẫn nổi bật (Blockquote Typography) -->
+                    <blockquote class="editorial-quote">
+                        “Đi cắm trại không phải để chạy trốn cuộc sống, mà là để cuộc sống không trôi qua một cách vội vã.”
+                    </blockquote>
+
+                    <a href="#article-detail" class="btn btn-primary">Đọc tiếp bài viết</a>
+                </div>
+            </article>
+
+            <!-- BỐ CỤC TẠP CHÍ 2 CỘT: DANH SÁCH BÀI VIẾT (TRÁI) + SIDEBAR (PHẢI) -->
+            <div class="blog-layout">
+                
+                <!-- CỘT TRÁI: LƯỚI BÀI VIẾT -->
+                <div class="blog-main">
+                    <div class="blog-grid">
+                        
+                        <!-- Bài viết 1 -->
+                        <article class="post-card">
+                            <div class="post-thumb">
+                                <img src="https://images.unsplash.com/photo-1533873984035-25970ab07461?auto=format&fit=crop&w=600&q=80" alt="Thực đơn BBQ ngoài trời">
+                                <span class="post-cat">Ẩm thực</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span>10/11/2026</span> • <span>4 phút đọc</span>
+                                </div>
+                                <h3><a href="#article-detail">Gợi ý 5 set thực đơn tiệc nướng BBQ chuẩn vị bên bếp lửa trại</a></h3>
+                                <p>Từ sườn nướng mật ong, hải sản giấy bạc đến khoai lang nướng than hồng — bí quyết tẩm ướp đơn giản nhưng cực kỳ bắt vị...</p>
+                                <a href="#article-detail" class="read-more">Xem chi tiết →</a>
+                            </div>
+                        </article>
+
+                        <!-- Bài viết 2 -->
+                        <article class="post-card">
+                            <div class="post-thumb">
+                                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=600&q=80" alt="Săn mây Đà Lạt">
+                                <span class="post-cat">Điểm đến</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span>04/11/2026</span> • <span>6 phút đọc</span>
+                                </div>
+                                <h3><a href="#article-detail">Top 4 tọa độ cắm trại săn mây đẹp nhất Đà Lạt mùa cuối năm</a></h3>
+                                <p>Tháng 11 đến tháng 3 là thời điểm vàng của biển mây Đà Lạt. Cùng điểm qua những ngọn đồi thông yên tĩnh nhất...</p>
+                                <a href="#article-detail" class="read-more">Xem chi tiết →</a>
+                            </div>
+                        </article>
+
+                        <!-- Bài viết 3 -->
+                        <article class="post-card">
+                            <div class="post-thumb">
+                                <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=600&q=80" alt="Chụp ảnh cắm trại">
+                                <span class="post-cat">Nhiếp ảnh</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span>28/10/2026</span> • <span>3 phút đọc</span>
+                                </div>
+                                <h3><a href="#article-detail">Bí quyết chụp ảnh "triệu like" với ánh đèn dây (Fairy Lights) ban đêm</a></h3>
+                                <p>Cách cân chỉnh ánh sáng điện thoại để bắt trọn khoảnh khắc lung linh trước cửa lều mà không bị nhiễu hạt...</p>
+                                <a href="#article-detail" class="read-more">Xem chi tiết →</a>
+                            </div>
+                        </article>
+
+                        <!-- Bài viết 4 -->
+                        <article class="post-card">
+                            <div class="post-thumb">
+                                <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=600&q=80" alt="Cắm trại gia đình">
+                                <span class="post-cat">Gia đình</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span>20/10/2026</span> • <span>5 phút đọc</span>
+                                </div>
+                                <h3><a href="#article-detail">Kinh nghiệm đưa trẻ nhỏ đi cắm trại qua đêm an toàn và vui vẻ</a></h3>
+                                <p>Những lưu ý về trang phục giữ ấm, thuốc chống côn trùng và các trò chơi vận động giúp bé rời xa màn hình điện thoại...</p>
+                                <a href="#article-detail" class="read-more">Xem chi tiết →</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Phân trang (Pagination UI) -->
+                    <nav class="pagination" aria-label="Phân trang bài viết">
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">Tiếp theo →</a>
+                    </nav>
+                </div>
+
+                <!-- CỘT PHẢI: SIDEBAR TẠP CHÍ -->
+                <aside class="blog-sidebar">
+                    
+                    <!-- Danh mục chủ đề -->
+                    <div class="sidebar-widget">
+                        <h3>Chuyên mục</h3>
+                        <ul class="cat-list">
+                            <li><a href="#"><span>Kinh nghiệm chuẩn bị</span> <span class="count">12</span></a></li>
+                            <li><a href="#"><span>Review điểm đến</span> <span class="count">08</span></a></li>
+                            <li><a href="#"><span>Ẩm thực & BBQ</span> <span class="count">05</span></a></li>
+                            <li><a href="#"><span>Cắm trại cùng gia đình</span> <span class="count">06</span></a></li>
+                            <li><a href="#"><span>Bảo vệ môi trường xanh</span> <span class="count">04</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Thẻ từ khóa (Tags Cloud) -->
+                    <div class="sidebar-widget">
+                        <h3>Từ khóa phổ biến</h3>
+                        <div class="tag-cloud">
+                            <a href="#">#GlampingĐàLạt</a>
+                            <a href="#">#SănMây</a>
+                            <a href="#">#TiệcBBQ</a>
+                            <a href="#">#BaVì</a>
+                            <a href="#">#LềuMôngCổ</a>
+                            <a href="#">#DuLịchXanh</a>
+                            <a href="#">#CuốiTuần</a>
+                        </div>
+                    </div>
+
+                    <!-- Form đăng ký nhận bản tin (Newsletter) -->
+                    <div class="sidebar-widget newsletter-box">
+                        <h3>Nhận ưu đãi & Cẩm nang</h3>
+                        <p>Đăng ký để nhận voucher giảm 15% cho lần đặt lều đầu tiên cùng các bài viết mới nhất.</p>
+                        <form action="#newsletter-ok" class="newsletter-form">
+                            <input type="email" placeholder="Nhập email của bạn..." required>
+                            <button type="submit" class="btn btn-primary btn-block">Đăng ký ngay</button>
+                        </form>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL ĐỌC NHANH BÀI VIẾT BẰNG :TARGET (KHÔNG CẦN JS) -->
+    <div id="article-detail" class="article-modal">
+        <div class="article-modal-content">
+            <a href="#" class="close-modal" title="Đóng bài viết">✕</a>
+            <span class="category-pill">Cẩm nang Glamping</span>
+            <h2>Lần đầu đi Glamping cần chuẩn bị gì? Cẩm nang từ A–Z</h2>
+            <div class="post-meta">
+                <span>🗓️ 15/11/2026</span> • <span>✍️ Minh Anh</span> • <span>📍 CampVibe Editorial</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=900&q=80" alt="Ảnh minh họa bài viết">
+            <div class="article-text">
+                <p><strong>1. Trang phục phù hợp với thời tiết vùng cao:</strong> Nhiệt độ ban đêm ở các khu rừng thông như Đà Lạt hay Ba Vì thường giảm sâu từ 14–18°C. Bạn nên chuẩn bị áo khoác giữ nhiệt, tất dày và giày thể thao có độ bám tốt.</p>
+                <p><strong>2. Đồ dùng cá nhân thiết yếu:</strong> Dù các khu Glamping của CampVibe đã trang bị sẵn khăn tắm, bàn chải và máy sấy, bạn vẫn nên mang theo kem chống nắng, thuốc xịt côn trùng và sạc dự phòng.</p>
+                <p><strong>3. Giữ gìn cảnh quan thiên nhiên:</strong> Tuân thủ nguyên tắc <em>"Không để lại gì ngoài những dấu chân"</em> — hạn chế rác thải nhựa dùng một lần và không tự ý đốt lửa ngoài khu vực quy định.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="campsites.html" class="btn btn-primary">Khám phá các khu trại ngay</a>
+                <a href="#" class="btn btn-outline">Đóng bài viết</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (Dùng chung) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">Camp<span>Vibe</span>.</a>
+                <p>Hệ thống đặt lịch cắm trại cao cấp hàng đầu Việt Nam. Mang đến trải nghiệm hòa mình với thiên nhiên an toàn và tiện nghi nhất.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="campsites.html">Danh sách khu trại</a></li>
+                    <li><a href="blog.html">Kinh nghiệm cắm trại</a></li>
+                    <li><a href="contact.html">Chính sách hoàn hủy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>📍 Số 1 Phố Xốm, Phú Lãm, Hà Đông, Hà Nội</li>
+                    <li>📞 Hotline: 1900 6868</li>
+                    <li>✉️ Email: booking@campvibe.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampVibe Glamping. Thiết kế bởi Sinh viên CNTT.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
