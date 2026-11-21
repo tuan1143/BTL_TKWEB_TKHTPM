@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Lịch & Liên Hệ - CampVibe Glamping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER (Dùng chung) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Camp<span>Vibe</span>.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="campsites.html">Khu cắm trại</a></li>
+                    <li><a href="detail.html">Dịch vụ nổi bật</a></li>
+                    <li><a href="blog.html">Cẩm nang</a></li>
+                    <li><a href="contact.html" class="active">Liên hệ</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-btn">Đặt lịch ngay</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER TIÊU ĐỀ -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Đặt Lịch Trải Nghiệm & Tư Vấn</h1>
+            <p>Điền thông tin bên dưới, đội ngũ CampVibe sẽ liên hệ xác nhận giữ lều trong vòng 15 phút</p>
+        </div>
+    </section>
+
+    <main class="contact-page">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- CỘT TRÁI: THÔNG TIN LIÊN HỆ & BẢN ĐỒ -->
+                <div class="contact-info">
+                    <h2>Kết nối trực tiếp với chúng tôi</h2>
+                    <p class="subtitle">Bạn cần tư vấn lịch trình cho đoàn đông người, tổ chức tiệc sinh nhật hay teambuilding ngoài trời? Đừng ngần ngại liên hệ.</p>
+
+                    <div class="info-cards">
+                        <div class="info-card-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <h4>Văn phòng điều hành</h4>
+                                <p>Số 1 Phố Xốm, Phường Phú Lãm, Quận Hà Đông, Hà Nội</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <h4>Tổng đài đặt trại 24/7</h4>
+                                <p>1900 6868 — Zalo CSKH: 0988 123 456</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <h4>Email hỗ trợ</h4>
+                                <p>booking@campvibe.vn</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nhúng khung bản đồ Google Maps chuẩn Responsive -->
+                    <div class="map-box">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.120482699639!2d105.7551283759682!3d20.947676190558016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452eaa9c461c3%3A0x2a3e1c421f294dc6!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyDEkOG6oWkgTmFt!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+                            width="100%" 
+                            height="240" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- CỘT PHẢI: FORM ĐẶT LỊCH CÓ KIỂM TRA VALIDATION THUẦN CSS -->
+                <div class="contact-form-wrapper">
+                    <h2>Phiếu Đăng Ký Đặt Lều</h2>
+                    <p class="form-hint">Các trường có dấu <span class="req">*</span> là bắt buộc. Hãy nhập đúng định dạng để kích hoạt xác nhận.</p>
+
+                    <form action="#booking-success" class="validated-form">
+                        
+                        <!-- Họ và tên -->
+                        <div class="v-group">
+                            <label for="fullname">Họ và tên khách hàng <span class="req">*</span></label>
+                            <input 
+                                type="text" 
+                                id="fullname" 
+                                name="fullname" 
+                                placeholder="Ví dụ: Nguyễn Văn An" 
+                                minlength="3" 
+                                required>
+                            <span class="error-msg">Vui lòng nhập họ tên đầy đủ (tối thiểu 3 ký tự).</span>
+                        </div>
+
+                        <!-- Hàng 2 cột: Số điện thoại & Email -->
+                        <div class="v-row">
+                            <div class="v-group">
+                                <label for="phone">Số điện thoại <span class="req">*</span></label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="Ví dụ: 0987654321" 
+                                    pattern="0[0-9]{9}" 
+                                    required>
+                                <span class="error-msg">Số điện thoại phải gồm 10 chữ số và bắt đầu bằng số 0.</span>
+                            </div>
+
+                            <div class="v-group">
+                                <label for="email">Địa chỉ Email <span class="req">*</span></label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="email@domain.com" 
+                                    required>
+                                <span class="error-msg">Vui lòng nhập đúng định dạng Email (có ký tự @).</span>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2 cột: Chọn khu trại & Ngày nhận lều -->
+                        <div class="v-row">
+                            <div class="v-group">
+                                <label for="camp-select">Khu cắm trại muốn đặt <span class="req">*</span></label>
+                                <select id="camp-select" name="camp" required>
+                                    <option value="">-- Chọn địa điểm --</option>
+                                    <option value="dalat-yurt">Lều Mông Cổ Rừng Thông (Đà Lạt)</option>
+                                    <option value="bavi-aframe">Lều Chữ A View Suối Mơ (Ba Vì)</option>
+                                    <option value="hococ-beach">Glamping Bãi Biển Hoàng Hôn (Hồ Cốc)</option>
+                                </select>
+                            </div>
+
+                            <div class="v-group">
+                                <label for="date-visit">Ngày dự kiến nhận lều <span class="req">*</span></label>
+                                <input type="date" id="date-visit" name="date" required>
+                            </div>
+                        </div>
+
+                        <!-- Ghi chú yêu cầu thêm -->
+                        <div class="v-group">
+                            <label for="notes">Yêu cầu đặc biệt (Tùy chọn)</label>
+                            <textarea 
+                                id="notes" 
+                                name="notes" 
+                                rows="4" 
+                                placeholder="Ví dụ: Dị ứng hải sản, cần chuẩn bị thêm nôi em bé, trang trí kỷ niệm..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Gửi Yêu Cầu Đặt Lịch</button>
+                    </form>
+
+                    <!-- HỘP THÔNG BÁO XÁC NHẬN HIỂN THỊ BẰNG :TARGET (KHÔNG CẦN JS) -->
+                    <div id="booking-success" class="success-modal">
+                        <div class="success-box">
+                            <div class="success-icon">🎉</div>
+                            <h3>Gửi yêu cầu thành công!</h3>
+                            <p>Cảm ơn bạn đã tin tưởng <strong>CampVibe</strong>. Nhân viên tư vấn sẽ gọi điện xác nhận lịch trình của bạn trong ít phút tới.</p>
+                            <a href="#" class="btn btn-primary">Đóng thông báo</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Dùng chung) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">Camp<span>Vibe</span>.</a>
+                <p>Hệ thống đặt lịch cắm trại cao cấp hàng đầu Việt Nam. Mang đến trải nghiệm hòa mình với thiên nhiên an toàn và tiện nghi nhất.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="campsites.html">Danh sách khu trại</a></li>
+                    <li><a href="blog.html">Kinh nghiệm cắm trại</a></li>
+                    <li><a href="contact.html">Chính sách hoàn hủy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>📍 Số 1 Phố Xốm, Phú Lãm, Hà Đông, Hà Nội</li>
+                    <li>📞 Hotline: 1900 6868</li>
+                    <li>✉️ Email: booking@campvibe.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampVibe Glamping. Thiết kế bởi Sinh viên CNTT.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

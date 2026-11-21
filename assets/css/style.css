@@ -1068,3 +1068,222 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* ================= 10. TRANG LIÊN HỆ & VALIDATION CSS ================= */
+.contact-page {
+    padding: 64px 0 80px;
+    background-color: var(--bg-light);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.contact-info .subtitle,
+.form-hint {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+}
+
+.req {
+    color: #DC2626;
+    font-weight: 700;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.info-card-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background-color: #FFFFFF;
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.info-icon {
+    font-size: 1.6rem;
+    background-color: var(--bg-light);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info-card-item h4 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.info-card-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.map-box {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* KHUNG FORM & HIỆU ỨNG KIỂM TRA LỖI BẰNG CSS THUẦN */
+.contact-form-wrapper {
+    background-color: #FFFFFF;
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.v-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.v-group {
+    margin-bottom: 20px;
+}
+
+.v-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.v-group input,
+.v-group select,
+.v-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    background-color: #FFFFFF;
+}
+
+.v-group input:focus,
+.v-group select:focus,
+.v-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.12);
+}
+
+.error-msg {
+    display: none;
+    font-size: 0.8rem;
+    color: #DC2626;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* KỸ THUẬT :NOT(:placeholder-shown) + :INVALID / :VALID */
+/* Chỉ báo lỗi đỏ sau khi người dùng đã bắt đầu gõ nhưng sai định dạng */
+.v-group input:not(:placeholder-shown):invalid {
+    border-color: #DC2626;
+    background-color: #FEF2F2;
+}
+
+.v-group input:not(:placeholder-shown):invalid + .error-msg {
+    display: block;
+}
+
+/* Báo viền xanh lá khi người dùng nhập đúng định dạng yêu cầu */
+.v-group input:not(:placeholder-shown):valid {
+    border-color: #16A34A;
+    background-color: #F0FDF4;
+}
+
+/* HỘP THÔNG BÁO POPUP XÁC NHẬN DÙNG :TARGET */
+.success-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    padding: 20px;
+}
+
+.success-modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-box {
+    background-color: #FFFFFF;
+    max-width: 440px;
+    width: 100%;
+    padding: 36px 28px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.success-modal:target .success-box {
+    transform: translateY(0);
+}
+
+.success-icon {
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+}
+
+.success-box h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.success-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+/* Responsive cho trang liên hệ */
+@media (max-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .v-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contact-form-wrapper {
+        padding: 24px 20px;
+    }
+}
