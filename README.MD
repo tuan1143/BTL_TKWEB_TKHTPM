@@ -19,9 +19,9 @@
 
 | Hạng mục | Nội dung |
 | :--- | :--- |
-| **Sinh viên thực hiện** | [Điền Họ và Tên của bạn] |
+| **Sinh viên thực hiện** | [Lỗ Văn Tuấn] |
 | **Mã sinh viên** | `1771020716` |
-| **Lớp / Ngành** | [Điền Lớp của bạn] – Công nghệ Thông tin |
+| **Lớp / Ngành** | [20-02] – Công nghệ Thông tin |
 | **Giảng viên hướng dẫn** | ThS. Lê Thái Bảo |
 | **Học kỳ / Năm học** | Học kỳ 1 – Năm học 2026–2027 |
 
@@ -77,6 +77,7 @@ BTL_TKWEB_TKHTPM/
 ├── README.md               # Tài liệu tổng quan & hướng dẫn dự án
 ├── AI_LOG.md               # Nhật ký khai báo sử dụng công cụ AI
 └── RELEASE_NOTES.md        # Ghi chú phiên bản phát hành
+<<<<<<< HEAD
 
 ## 🚀 5. Hướng dẫn Cài đặt & Chạy Cục bộ
 
@@ -110,3 +111,5 @@ Do phạm vi và ràng buộc của Bài tập lớn A3 chỉ sử dụng **HTML
   * Tích hợp cổng thanh toán trực tuyến (VNPay, MoMo, chuyển khoản VietQR) và tự động gửi email xác nhận đơn đặt phòng.
 * **Giai đoạn 3 — Hệ thống Quản trị (Admin Dashboard):**
   * Xây dựng trang quản trị dành cho chủ khu cắm trại để thêm/sửa/xóa thông tin lều, cập nhật bảng giá theo mùa và thống kê doanh thu đặt lịch.
+=======
+>>>>>>> 8d0c81f9e71a81da0f254542a7472e7a98ba8dee
