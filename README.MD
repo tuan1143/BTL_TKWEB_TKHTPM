@@ -21,7 +21,7 @@
 | :--- | :--- |
 | **Sinh viên thực hiện** | [Lỗ Văn Tuấn] |
 | **Mã sinh viên** | `1771020716` |
-| **Lớp / Ngành** | [Điền Lớp của bạn] – Công nghệ Thông tin |
+| **Lớp / Ngành** | [20-02] – Công nghệ Thông tin |
 | **Giảng viên hướng dẫn** | ThS. Lê Thái Bảo |
 | **Học kỳ / Năm học** | Học kỳ 1 – Năm học 2026–2027 |
 
