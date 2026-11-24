@@ -19,7 +19,7 @@
 
 | Hạng mục | Nội dung |
 | :--- | :--- |
-| **Sinh viên thực hiện** | [Điền Họ và Tên của bạn] |
+| **Sinh viên thực hiện** | [Lỗ Văn Tuấn] |
 | **Mã sinh viên** | `1771020716` |
 | **Lớp / Ngành** | [Điền Lớp của bạn] – Công nghệ Thông tin |
 | **Giảng viên hướng dẫn** | ThS. Lê Thái Bảo |
