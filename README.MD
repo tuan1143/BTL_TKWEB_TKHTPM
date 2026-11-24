@@ -10,8 +10,8 @@
 * **🌐 Website trực tuyến (Live Demo):** [https://tuan1143.github.io/BTL_TKWEB_TKHTPM/](https://tuan1143.github.io/BTL_TKWEB_TKHTPM/)
 * **📂 Kho mã nguồn (Repository):** [https://github.com/tuan1143/BTL_TKWEB_TKHTPM](https://github.com/tuan1143/BTL_TKWEB_TKHTPM)
 * **🏷️ Phiên bản phát hành (Release Tag):** `v1.0.0`
-* **📝 Nhật ký sử dụng AI:** [Xem chi tiết tại AI_LOG.md](./AI_LOG.md)
-* **📋 Ghi chú phiên bản:** [Xem chi tiết tại RELEASE_NOTES.md](./RELEASE_NOTES.md)
+* **📝 Nhật ký sử dụng AI:** [Xem chi tiết tại docs/AI_LOG.md](./docs/AI_LOG.md)
+* **📋 Ghi chú phiên bản:** [Xem chi tiết tại docs/RELEASE_NOTES.md](./docs/RELEASE_NOTES.md)
 
 ---
 
@@ -64,19 +64,25 @@ Toàn bộ màu sắc, khoảng cách và bo góc được quản lý tập trun
 
 ## 📁 4. Cấu trúc Thư mục Mã nguồn
 
+Toàn bộ mã nguồn và tài nguyên của dự án **CampVibe Glamping** được tổ chức khoa học theo cấu trúc thực tế trong kho lưu trữ như sau:
+
 ```text
-BTL_TKWEB_TKHTPM/
-├── index.html              # Trang chủ
-├── campsites.html          # Trang danh sách & Bộ lọc khu cắm trại
-├── detail.html             # Trang chi tiết lều, thư viện ảnh & bảng giá
-├── blog.html               # Trang tạp chí cẩm nang kinh nghiệm
-├── contact.html            # Trang liên hệ, bản đồ & phiếu đặt lịch
-├── assets/
-│   └── css/
-│       └── style.css       # Tệp định dạng CSS chung cho toàn bộ website
-├── README.md               # Tài liệu tổng quan & hướng dẫn dự án
-├── AI_LOG.md               # Nhật ký khai báo sử dụng công cụ AI
-└── RELEASE_NOTES.md        # Ghi chú phiên bản phát hành
+CampVibe-Glamping/
+├── assets/                     # Thư mục quản lý tài nguyên định dạng giao diện
+│   └── css/                    # Thư mục chứa mã nguồn CSS3
+│       └── style.css           # Tệp định dạng chung cho toàn bộ website (Biến :root, Layout, Responsive)[cite: 2]
+│
+├── docs/                       # Thư mục lưu trữ tài liệu bàn giao & nhật ký phát triển[cite: 2]
+│   ├── AI_LOG.md               # Nhật ký khai báo quá trình sử dụng công cụ AI theo quy định học phần[cite: 2]
+│   └── RELEASE_NOTES.md        # Ghi chú chi tiết các tính năng và sửa lỗi của phiên bản phát hành[cite: 2]
+│
+├── .gitignore                  # Cấu hình loại trừ các tệp rác hệ thống khi đẩy mã nguồn lên Git[cite: 2]
+├── blog.html                   # Trang tạp chí cẩm nang kinh nghiệm cắm trại & cửa sổ đọc nhanh (:target)[cite: 2]
+├── campsites.html              # Trang danh sách khu cắm trại & bộ lọc theo khu vực địa lý thuần CSS[cite: 2]
+├── contact.html                # Trang liên hệ, bản đồ Google Maps & phiếu đặt lịch kiểm tra định dạng[cite: 2]
+├── detail.html                 # Trang chi tiết lều, thư viện chuyển đổi ảnh CSS, bảng giá & khung đặt phòng[cite: 2]
+├── index.html                  # Trang chủ (Hero Banner, thanh tìm kiếm nhanh, Bento Grid điểm đến, tiện ích)[cite: 2]
+└── README.md                   # Tài liệu tổng quan dự án, kiến trúc thiết kế & hướng dẫn chạy cục bộ[cite: 2]
 <<<<<<< HEAD
 
 ## 🚀 5. Hướng dẫn Cài đặt & Chạy Cục bộ
