@@ -77,3 +77,36 @@ BTL_TKWEB_TKHTPM/
 ├── README.md               # Tài liệu tổng quan & hướng dẫn dự án
 ├── AI_LOG.md               # Nhật ký khai báo sử dụng công cụ AI
 └── RELEASE_NOTES.md        # Ghi chú phiên bản phát hành
+
+## 🚀 5. Hướng dẫn Cài đặt & Chạy Cục bộ
+
+Dự án là website tĩnh thuần **HTML5/CSS3** nên không yêu cầu cài đặt môi trường máy chủ (Server) hay cơ sở dữ liệu phức tạp. Bạn có thể trải nghiệm theo một trong ba cách sau:
+
+### Cách 1: Xem trực tuyến qua GitHub Pages (Khuyên dùng)
+Truy cập trực tiếp đường dẫn đã triển khai trên mọi trình duyệt (máy tính hoặc điện thoại):
+* **URL:** [https://tuan1143.github.io/BTL_TKWEB_TKHTPM/](https://tuan1143.github.io/BTL_TKWEB_TKHTPM/)
+
+### Cách 2: Tải mã nguồn về máy và mở bằng trình duyệt
+1. Mở **Terminal** (hoặc Git Bash / PowerShell) và chạy lệnh sao chép kho lưu trữ:
+   ```bash
+   git clone [https://github.com/tuan1143/BTL_TKWEB_TKHTPM.git](https://github.com/tuan1143/BTL_TKWEB_TKHTPM.git)
+
+## ⚠️ 6. Giới hạn Hiện tại & Hướng Phát triển
+
+### 6.1. Các giới hạn hiện tại (Current Limitations)
+Do phạm vi và ràng buộc của Bài tập lớn A3 chỉ sử dụng **HTML5 và CSS3 thuần (Zero JavaScript)**, hệ thống hiện tại tồn tại một số giới hạn kỹ thuật sau:
+* **Dữ liệu tĩnh (Static Data):** Toàn bộ thông tin về khu cắm trại, bảng giá và bài viết cẩm nang đang được lưu trữ cứng (hard-coded) trực tiếp trong các tệp `.html`, chưa có cơ chế tự động hóa render từ tệp dữ liệu JSON hoặc cơ sở dữ liệu.
+* **Bộ lọc chưa kết hợp đa điều kiện:** Tại trang danh sách (`campsites.html`), bộ lọc khu vực địa lý (Đà Lạt, Ba Vì, Hồ Cốc) hoạt động tương tác thực tế, tuy nhiên các tùy chọn tiện ích dạng checkbox ở cột bên trái hiện chỉ đóng vai trò minh họa giao diện.
+* **Tính toán giá tự động:** Tại khung đặt phòng trang chi tiết (`detail.html`), bảng tổng tạm tính hiển thị giá trị mẫu cho 1 đêm tiêu chuẩn, chưa tự động nhân tổng tiền khi người dùng thay đổi số đêm lưu trú, số lượng khách hoặc chọn dịch vụ bổ sung.
+* **Lưu trữ & Xử lý biểu mẫu:** Biểu mẫu đăng ký đặt lịch (`contact.html`) đã kiểm tra hợp lệ dữ liệu đầu vào (`:valid` / `:invalid`) và hiển thị hộp thoại xác nhận giả lập (`:target`), nhưng chưa gửi dữ liệu về máy chủ (Backend) hoặc gửi email xác nhận tự động tới khách hàng.
+
+### 6.2. Hướng phát triển trong tương lai (Future Roadmap)
+Để nâng cấp **CampVibe Glamping** thành một hệ thống thương mại điện tử hoàn chỉnh đưa vào vận hành thực tế, dự án định hướng phát triển theo 3 giai đoạn:
+* **Giai đoạn 1 — Tương tác động với JavaScript (ES6+):**
+  * Tự động tính toán tổng chi phí đặt lều theo thời gian thực (dựa trên ngày nhận/trả lều, phụ thu cuối tuần/lễ Tết và dịch vụ đi kèm).
+  * Nâng cấp bộ lọc đa điều kiện kết hợp tìm kiếm theo từ khóa, khoảng giá và tiện ích.
+* **Giai đoạn 2 — Xây dựng Backend & Cơ sở dữ liệu:**
+  * Phát triển API bằng Node.js (Express) hoặc PHP kết nối cơ sở dữ liệu (SQL Server / MySQL) để quản lý trạng thái lều trống theo ngày thực tế, tránh trùng lịch đặt.
+  * Tích hợp cổng thanh toán trực tuyến (VNPay, MoMo, chuyển khoản VietQR) và tự động gửi email xác nhận đơn đặt phòng.
+* **Giai đoạn 3 — Hệ thống Quản trị (Admin Dashboard):**
+  * Xây dựng trang quản trị dành cho chủ khu cắm trại để thêm/sửa/xóa thông tin lều, cập nhật bảng giá theo mùa và thống kê doanh thu đặt lịch.
